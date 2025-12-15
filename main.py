@@ -17,10 +17,10 @@ st.set_page_config(page_title="Movie Recommender", layout="wide")
 
 # -------------------- DOWNLOAD PICKLE FILES IF NOT PRESENT --------------------
 if not os.path.exists("movies.pkl"):
-    gdown.download(MOVIES_FILE_URL, "movies.pkl", quiet=False)
+    gdown.download(MOVIES_FILE_URL, "movies.pkl", quiet=False, fuzzy=True)
 
 if not os.path.exists("similarity.pkl"):
-    gdown.download(SIMILARITY_FILE_URL, "similarity.pkl", quiet=False)
+    gdown.download(SIMILARITY_FILE_URL, "similarity.pkl", quiet=False, fuzzy=True)
 
 # -------------------- LOAD PICKLES --------------------
 with open("movies.pkl", "rb") as f:
